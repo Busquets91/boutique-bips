@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="robots" content="all,follow">
+	<meta name="googlebot" content="index,follow,snippet,archive">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Boutique en ligne du Bureau des Ingénieur de Paris-Sud">
+	<meta name="author" content="Maxime Dufour - Alexis Pointurier">
+	<meta name="keywords" content="pps">
+
+	<title>
+		Polytech Paris-Sud: Boutique
+	</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+	<!-- styles -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/owl.carousel.css" rel="stylesheet">
+	<link href="css/owl.theme.css" rel="stylesheet">
+
+	<!-- main stylesheet -->
+	<link href="css/style.blue.css" rel="stylesheet" id="theme-stylesheet">
+
+	<!-- custome stylesheet -->
+	<link href="css/custom.css" rel="stylesheet">
+
+	<script src="js/respond.min.js"></script>
+
+	<link rel="shortcut icon" href="favicon.png">
+
+</head>
+
+<body>
+	<!--NAVBAR-->
+	<div class="navbar navbar-default yamm" role="navigation" id="navbar">
+		<!---MODAL LOGIN POP-UP--->
+		<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="Login">Connexion</h4>
+					</div>
+					<div class="modal-body">
+						<form action="customer-orders.html" method="post">
+							<div class="form-group">
+								<input type="text" class="form-control" id="email-modal" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="password-modal" placeholder="Mot de passe">
+							</div>
+							<p class="text-center">
+								<button class="btn btn-primary"><i class="fa fa-sign-in"></i> Connexion</button>
+							</p>
+						</form>
+						<p class="text-center text-muted">Pas encore inscrit?</p>
+						<p class="text-center text-muted"><a href="register.html"><strong>S'inscrire</strong></a>! C'est facile et cela vous donnes accés à toutes les fonctionnalités de la Boutique !</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!---END LOGIN POP-UP--->
+		<div class="container">
+			<!---NAVBAR HEADER-->
+			<div class="navbar-header">
+				<a class="navbar-brand home" href="index.html">
+					<img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
+					<img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">La Boutique - Accueil</span>
+				</a>
+				<div class="navbar-buttons">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+						<span class="sr-only">Toggle navigation</span>
+						<i class="fa fa-align-justify"></i>
+					</button>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+						<span class="sr-only">Toggle search</span>
+						<i class="fa fa-search"></i>
+					</button>
+					<a class="btn btn-default navbar-toggle" href="basket.html">
+						<i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">2 articles</span>
+					</a>
+				</div>
+			</div>
+			<!---END NAVBAR HEADER-->
+			<!---MAIN NAVBAR-->
+			<div class="navbar-collapse collapse" id="navigation">
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a href="index.html">Accueil</a>
+					</li>
+					<li class="active">
+						<a href="category.html">Catalogue</a>
+					</li>
+					<li>
+						<a href="#">Informations</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#login-modal">Connexion</a>
+					</li>
+					<li>
+						<a href="register.html">Inscription</a>
+					</li>
+				</ul>
+			</div>
+			<!---END MAIN NAVBAR-->
+			<!---NAVBAR SEARCH AND CART-->
+			<div class="navbar-buttons">
+				<div class="navbar-collapse collapse right" id="basket-overview">
+					<a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">2 articles</span></a>
+				</div>
+				<div class="navbar-collapse collapse right" id="search-not-mobile">
+					<button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+						<span class="sr-only">Toggle search</span>
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+			</div>
+			<!---END NAVBAR SEARCH AND CART-->
+			<!---SEARCH COMPONENT-->
+			<div class="collapse clearfix" id="search">
+				<form class="navbar-form" role="search">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Rechercher">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<!---END SEARCH COMPONENT-->
+		</div>
+	</div>
+	<!--NAVBAR END-->
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+
+	<div id="all">
+		<div id="content">
+			<div class="container">
+				<!---BARRE EMPLACEMENT-->
+				<div class="col-md-12">
+					<ul class="breadcrumb">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>Catalogue</li>
+					</ul>
+				</div>
+				<!---END BARRE EMPLACEMENT-->
+				<!--FILTER-->
+				<div class="col-md-3">
+					<div class="panel panel-default sidebar-menu">
+						<div class="panel-heading">
+							<h3 class="panel-title">Type <a class="btn btn-xs btn-danger pull-right" href="#"><i class="fa fa-times-circle"></i>Réinit</a></h3>
+						</div>
+						<div class="panel-body">
+							<form>
+								<div class="form-group">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">T-Shirt (10)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">Sweat (12)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">Accessoires (15)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">Jogging (14)
+										</label>
+									</div>
+								</div>
+								<button class="btn btn-default btn-sm btn-primary"><i class="fa fa-pencil"></i> Appliquer</button>
+							</form>
+						</div>
+					</div>
+					<div class="panel panel-default sidebar-menu">
+						<div class="panel-heading">
+							<h3 class="panel-title">Couleur <a class="btn btn-xs btn-danger pull-right" href="#"><i class="fa fa-times-circle"></i> Réinit</a></h3>
+						</div>
+						<div class="panel-body">
+							<form>
+								<div class="form-group">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox"> <span class="colour white"></span> Blanc (14)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox"> <span class="colour blue"></span> Bleur (10)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox"> <span class="colour green"></span> Vert (20)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox"> <span class="colour yellow"></span> Or (13)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox"> <span class="colour red"></span> Rouge (10)
+										</label>
+									</div>
+								</div>
+								<button class="btn btn-default btn-sm btn-primary"><i class="fa fa-pencil"></i> Appliquer</button>
+							</form>
+						</div>
+					</div>
+					<div class="panel panel-default sidebar-menu">
+						<div class="panel-heading">
+							<h3 class="panel-title">Taille <a class="btn btn-xs btn-danger pull-right" href="#"><i class="fa fa-times-circle"></i> Réinit</a></h3>
+						</div>
+						<div class="panel-body">
+							<form>
+								<div class="form-group">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">XS (14)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">S (4)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">M (8)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">L (12)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">XL (1)
+										</label>
+									</div>
+								</div>
+								<button class="btn btn-default btn-sm btn-primary"><i class="fa fa-pencil"></i> Appliquer</button>
+							</form>
+						</div>
+					</div>
+				</div>	
+				<!--END FILTER-->
+				<div class="col-md-9">
+					<!--BARRE INFOS-->
+					<div class="box info-bar">
+						<div class="row">
+							<div class="col-sm-12 col-md-4 products-showing">
+								<strong>12</strong> sur <strong>25</strong> articles affichés
+							</div>
+							<div class="col-sm-12 col-md-8  products-number-sort">
+								<div class="row">
+									<form class="form-inline">
+										<div class="col-md-6 col-sm-6">
+											<div class="products-number">
+												<strong>Afficher</strong>  <a href="#" class="btn btn-default btn-sm btn-primary">12</a>  <a href="#" class="btn btn-default btn-sm">24</a>  <a href="#" class="btn btn-default btn-sm">All</a> articles
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<div class="products-sort-by">
+												<strong>Trier par</strong>
+												<select name="sort-by" class="form-control">
+													<option>Prix</option>
+													<option>Nom</option>
+													<option>En promotion</option>
+												</select>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--END BARRE INFOS-->	
+					<!--ARTICLES-->
+					<div class="row products">
+						<div class="col-md-4 col-sm-6">
+							<div class="product">
+								<div class="flip-container">
+									<div class="flipper">
+										<div class="front">
+											<a href="detail.html">
+												<img src="img/product1.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+										<div class="back">
+											<a href="detail.html">
+												<img src="img/product1_2.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="detail.html" class="invisible">
+									<img src="img/product1.jpg" alt="" class="img-responsive">
+								</a>
+								<div class="text">
+									<h3><a href="detail.html">Article numero un avec des options</a></h3>
+									<p class="price">143.00€</p>
+									<p class="buttons">
+										<a href="detail.html" class="btn btn-default">Voir détails</a>
+										<a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="product">
+								<div class="flip-container">
+									<div class="flipper">
+										<div class="front">
+											<a href="detail.html">
+												<img src="img/product2.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+										<div class="back">
+											<a href="detail.html">
+												<img src="img/product2_2.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="detail.html" class="invisible">
+									<img src="img/product2.jpg" alt="" class="img-responsive">
+								</a>
+								<div class="text">
+									<h3><a href="detail.html">Article numero deux en solde</a></h3>
+									<p class="price"><del>280€</del> 143.00€</p>
+									<p class="buttons">
+										<a href="detail.html" class="btn btn-default">Voir détails</a>
+										<a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter</a>
+									</p>
+								</div>
+								<div class="ribbon sale">
+									<div class="theribbon">SOLDE</div>
+									<div class="ribbon-background"></div>
+								</div>
+
+								<div class="ribbon new">
+									<div class="theribbon">NEW</div>
+									<div class="ribbon-background"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="product">
+								<div class="flip-container">
+									<div class="flipper">
+										<div class="front">
+											<a href="detail.html">
+												<img src="img/product3.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+										<div class="back">
+											<a href="detail.html">
+												<img src="img/product3_2.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="detail.html" class="invisible">
+									<img src="img/product3.jpg" alt="" class="img-responsive">
+								</a>
+								<div class="text">
+									<h3><a href="detail.html">Article 3</a></h3>
+									<p class="price">96.00€</p>
+									<p class="buttons">
+										<a href="detail.html" class="btn btn-default">Voir détails</a>
+										<a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="product">
+								<div class="flip-container">
+									<div class="flipper">
+										<div class="front">
+											<a href="detail.html">
+												<img src="img/product3.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+										<div class="back">
+											<a href="detail.html">
+												<img src="img/product3_2.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="detail.html" class="invisible">
+									<img src="img/product3.jpg" alt="" class="img-responsive">
+								</a>
+								<div class="text">
+									<h3><a href="detail.html">Article 4 classique</a></h3>
+									<p class="price">25.00€</p>
+									<p class="buttons">
+										<a href="detail.html" class="btn btn-default">Voir détails</a>
+										<a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="product">
+								<div class="flip-container">
+									<div class="flipper">
+										<div class="front">
+											<a href="detail.html">
+												<img src="img/product2.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+										<div class="back">
+											<a href="detail.html">
+												<img src="img/product2_2.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="detail.html" class="invisible">
+									<img src="img/product2.jpg" alt="" class="img-responsive">
+								</a>
+								<div class="text">
+									<h3><a href="detail.html">Avant dernier article whaou</a></h3>
+									<p class="price">12.00€</p>
+									<p class="buttons">
+										<a href="detail.html" class="btn btn-default">Voir détails</a>
+										<a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter</a>
+									</p>
+								</div>
+								<div class="ribbon new">
+									<div class="theribbon">NEW</div>
+									<div class="ribbon-background"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="product">
+								<div class="flip-container">
+									<div class="flipper">
+										<div class="front">
+											<a href="detail.html">
+												<img src="img/product1.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+										<div class="back">
+											<a href="detail.html">
+												<img src="img/product1_2.jpg" alt="" class="img-responsive">
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="detail.html" class="invisible">
+									<img src="img/product1.jpg" alt="" class="img-responsive">
+								</a>
+								<div class="text">
+									<h3><a href="detail.html">Articles trés cher mais genre vraiment</a></h3>
+									<p class="price">999.99€</p>
+									<p class="buttons">
+										<a href="detail.html" class="btn btn-default">Voir détails</a>
+										<a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Ajouter</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--END ARTICLES-->
+					<!--GESTION PAGES-->
+					<div class="pages">
+						<p class="loadMore">
+							<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Plus d'articles</a>
+						</p>
+
+						<ul class="pagination">
+							<li>
+								<a href="#">&laquo;</a>
+							</li>
+							<li class="active">
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li>
+								<a href="#">&raquo;</a>
+							</li>
+						</ul>
+					</div>
+					<!--END GESTION PAGES-->
+				</div>
+			</div>
+		</div>
+
+		<!-- *** COPYRIGHT *** -->
+		<div id="copyright">
+			<div class="container">
+				<div class="col-md-6">
+					<p class="pull-left">© 2017 APP de l'ambiance</p>
+
+				</div>
+				<div class="col-md-6">
+					<p class="pull-right">
+						Site réalisé par Alexis Pointurier et Maxime Dufour
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- *** COPYRIGHT END *** -->
+
+	</div>
+	<!-- *** SCRIPTS TO INCLUDE *** -->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/bootstrap-hover-dropdown.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/front.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
